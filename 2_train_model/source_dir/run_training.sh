@@ -12,22 +12,23 @@ else
    NUM_WORKERS=1
 fi
 
-echo "===TRAINING THE MODEL=="
-python model_main_tf2.py \
-    --pipeline_config_path ${PIPELINE_CONFIG_PATH} \
-    --model_dir ${MODEL_DIR} \
-    --num_train_steps ${NUM_TRAIN_STEPS} \
-    --num_workers ${NUM_WORKERS} \
-    --sample_1_of_n_eval_examples ${SAMPLE_1_OF_N_EVAL_EXAMPLES} \
-    --alsologtostderr
+# echo "===TRAINING THE MODEL=="
+# python model_main_tf2.py \
+#     --pipeline_config_path ${PIPELINE_CONFIG_PATH} \
+#     --model_dir ${MODEL_DIR} \
+#     --num_train_steps ${NUM_TRAIN_STEPS} \
+#     --num_workers ${NUM_WORKERS} \
+#     --sample_1_of_n_eval_examples ${SAMPLE_1_OF_N_EVAL_EXAMPLES} \
+#     --alsologtostderr
 
-echo "==EVALUATING THE MODEL=="
-python model_main_tf2.py \
-    --pipeline_config_path ${PIPELINE_CONFIG_PATH} \
-    --model_dir ${MODEL_DIR} \
-    --checkpoint_dir ${MODEL_DIR} \
-    --eval_timeout 10
+# echo "==EVALUATING THE MODEL=="
+# python model_main_tf2.py \
+#     --pipeline_config_path ${PIPELINE_CONFIG_PATH} \
+#     --model_dir ${MODEL_DIR} \
+#     --checkpoint_dir ${MODEL_DIR} \
+#     --eval_timeout 10
 
+echo "Model dir: ${MODEL_DIR}"
 echo "==EXPORTING THE MODEL=="
 python exporter_main_v2.py \
     --trained_checkpoint_dir ${MODEL_DIR} \
