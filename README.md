@@ -6,8 +6,8 @@
 
 
 Follow the step-by-step guide by executing the notebooks in the following folders:
-* 1_prepare_data/prepare_data.ipynb - TODO
-* 2_train_model/train_model.ipynb - TODO
+* 1_prepare_data/prepare_data.ipynb - TODO for training --- not ready
+* 2_train_model/train_model.ipynb - TODO for training --- not ready
 * 3_predict/deploy_endpoint.ipynb
 * 2_train_model/model-exporter.ipynb - to export existing model
 
