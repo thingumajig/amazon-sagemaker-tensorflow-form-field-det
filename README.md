@@ -1,16 +1,15 @@
-## TensorFlow 2 Object Detection API SageMaker
+## TensorFlow 2 Object Detection API SageMaker for form field detection
 
 
 
 ### Instructions
-You will use an example dataset from the [inaturalist.org](http://inaturalist.org/) and train a Tensorflow Object Detection model to recognise bees from RGB images.
-This dataset contains 500 images of bees that have been uploaded by inaturalist users for the purposes of recording the observation and identification. We only used images that their users have licensed under [CC0](https://creativecommons.org/share-your-work/public-domain/cc0/) license.
+
 
 Follow the step-by-step guide by executing the notebooks in the following folders:
 * 1_prepare_data/prepare_data.ipynb - TODO
 * 2_train_model/train_model.ipynb - TODO
 * 3_predict/deploy_endpoint.ipynb
-
+* 2_train_model/model-exporter.ipynb - to export existing model
 
 
 ### Monitor model training jobs with Tensorboard
